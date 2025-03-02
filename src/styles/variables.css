@@ -1,0 +1,18 @@
+:root {
+  /* New Color Palette */
+  --primary-dark: #243642;
+  /* Dark blue-gray */
+  --primary: #387478;
+  /* Teal */
+  --primary-light: #629584;
+  /* Sage green */
+  --background-light: #ffffff;
+  /* Light mint */
+
+  /* Additional shades */
+  --primary-dark-hover: #2d424f;
+  --primary-hover: #458b90;
+  --text-color: #243642;
+  --text-light: #E2F1E7;
+  --border-color: #629584;
+}

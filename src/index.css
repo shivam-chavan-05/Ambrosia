@@ -1,9 +1,4 @@
-/* google fonts */
-
-@import url("https://fonts.googleapis.com/css2?family=RocknRoll+One&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Istok+Web&display=swap");
-
-/* reset default style */
+@import url("./styles/variables.css");
 
 * {
   margin: 0;
@@ -11,10 +6,8 @@
   box-sizing: border-box;
 }
 
-/* base style */
-
 body {
-  background: #fcfcfc;
+  background: var(--background-light);
   font-family: "Istok Web", sans-serif;
 }
 
@@ -25,6 +18,7 @@ h4,
 h5,
 h6 {
   font-family: "RocknRoll One", sans-serif !important;
+  color: var(--primary-dark);
 }
 
 a {
@@ -36,9 +30,28 @@ h1,
 h2 {
   font-size: 2.1rem;
   font-weight: 600;
-  color: #212245;
+  color: var(--primary-dark);
 }
 
 section {
   padding: 60px 0px;
+}
+
+.addTOCart__btn {
+  border: none;
+  padding: 7px 25px;
+  background: var(--primary);
+  color: var(--text-light);
+  border-radius: 5px;
+  font-size: 0.9rem;
+  transition: 0.3s;
+}
+
+.addTOCart__btn:hover {
+  background: var(--primary-hover);
+  color: var(--text-light);
+}
+
+.active__menu {
+  color: var(--primary) !important;
 }

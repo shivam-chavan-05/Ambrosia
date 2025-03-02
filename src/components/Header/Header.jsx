@@ -24,8 +24,8 @@ const nav__links = [
     path: "/cart",
   },
   {
-    display: "Contact",
-    path: "/contact",
+    display: "Profile",
+    path: "/profile",
   },
 ];
 
@@ -36,13 +36,10 @@ const Header = () => {
   const dispatch = useDispatch();
 
   const toggleMenu = () => menuRef.current.classList.toggle("show__menu");
-  let navigate = useNavigate();
 
   const toggleCart = () => {
     dispatch(cartUiActions.toggle());
   };
-
-  console.log(menuRef?.current?.classList.value);
 
   useEffect(() => {
     window.addEventListener("scroll", () => {
@@ -56,28 +53,20 @@ const Header = () => {
       }
     });
 
-    return () => window.removeEventListener("scroll");
+    return () => window.removeEventListener("scroll", null);
   }, []);
 
   return (
     <header className="header" ref={headerRef}>
       <Container>
         <div className="nav__wrapper d-flex align-items-center justify-content-between">
-          <div className="logo" onClick={() => navigate("/home")}>
+          <div className="logo d-flex align-items-center gap-2">
             <img src={logo} alt="logo" />
-            <h5>Tasty Treat</h5>
+            <h2 className="company-name">AMBROSIA</h2>
           </div>
-          {/* ======= menu ======= */}
-          <div className="navigation" ref={menuRef} onClick={toggleMenu}>
-            <div
-              className="menu d-flex align-items-center gap-5"
-              onClick={(event) => event.stopPropagation()}
-            >
-              <div className="header__closeButton">
-                <span onClick={toggleMenu}>
-                  <i className="ri-close-fill"></i>
-                </span>
-              </div>
+
+          <div className="navigation d-flex align-items-center gap-5">
+            <div className="menu d-flex align-items-center gap-5" ref={menuRef}>
               {nav__links.map((item, index) => (
                 <NavLink
                   to={item.path}
@@ -85,21 +74,17 @@ const Header = () => {
                   className={(navClass) =>
                     navClass.isActive ? "active__menu" : ""
                   }
-                  onClick={toggleMenu}
                 >
                   {item.display}
                 </NavLink>
               ))}
             </div>
-          </div>
 
-          {/* ======== nav right icons ========= */}
-          <div className="nav__right d-flex align-items-center gap-4">
             <span className="cart__icon" onClick={toggleCart}>
               <i className="ri-shopping-basket-line"></i>
               <span className="cart__badge">{totalQuantity}</span>
             </span>
-            
+
             <span className="mobile__menu" onClick={toggleMenu}>
               <i className="ri-menu-line"></i>
             </span>
