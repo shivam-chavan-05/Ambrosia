@@ -1,4 +1,4 @@
-## Ambrosia - Medically Tailored Meals Delivered to Your Doorstep
+## Ambrosia - Tailored Meals Delivered to Your Doorstep
 
 ### Techn Stack:
 
