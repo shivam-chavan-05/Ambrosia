@@ -6,7 +6,7 @@ Frontend
 
 React – component-based UI, stateful interactions
 
-React Router – client-side routing for pages and dynamic pizza details
+React Router – client-side routing for pages and dynamic details
 
 Redux Toolkit – centralized cart state management
 
