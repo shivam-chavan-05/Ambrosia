@@ -2,10 +2,23 @@
 
 ### Techn Stack:
 
-1. React.js
-2. Redux Toolkit
-3. ReactStrap
-4. CSS
+Frontend
+
+React – component-based UI, stateful interactions
+
+React Router – client-side routing for pages and dynamic pizza details
+
+Redux Toolkit – centralized cart state management
+
+Redux Thunk – async-ready middleware (future API calls)
+
+Reactstrap + CSS – layout and styling
+
+React Paginate – clean pagination UI
+
+State & Persistence
+
+Redux + localStorage – cart data persists across refreshes
 
 ### How to start?
 
